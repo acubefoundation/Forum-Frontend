@@ -47,9 +47,8 @@ const handleSubmit = async (e)=> {
 
   // to change type attribute from 'password' to 'text' and vice versa
   const [icon, setIcon] = useState(eyeOff);
-  // to change the icon when clicked
-
-
+  //
+  
   const HandleIconChange = () => {
     // event listen for Password function
     if (type === "password") {
@@ -62,27 +61,29 @@ const handleSubmit = async (e)=> {
   };
   
   return (
-    <div className="container-fluid sign_page">
-      <div className="container d-md-flex mx-auto py-5 align-items-center">
-        <div className="form_wrapper col-12 col-md-6 me-md-2 p-5 d-flex flex-column">
-          <p className="p11">Join the network</p>
-          <p className="p22 lorem">
+    <div className="container-fluid ">
+      <div className="container ">
+        <div className="signupContainer">
+          <h3 className="">Join the network</h3>
+          <p className=" ">
             Already have an account?
-            <Link to="/login" className="a11">
+            <Link to="/login" className="">
               Sign in
             </Link>
           </p>
+        
           <form onSubmit={handleSubmit}>
-            <input
-              className="in11 mr-1"
+              <div className="form-input form">
+                <input
+              className="pad-right login-input"
               name="email"
               onChange={handleChange}
               type="email"
               placeholder="Email"
             />
-            <div className="FLname d-flex">
+            <div className="name-container">
               <input
-                className="in11 me-1"
+                className=" name-input"
                 name="firstName"
                 onChange={handleChange}
                 type="text"
@@ -90,7 +91,7 @@ const handleSubmit = async (e)=> {
               />
 
               <input
-                className="in11 ms-1"
+                className="name-input pad-left"
                 name="lastName"
                 onChange={handleChange}
                 type="text"
@@ -99,7 +100,7 @@ const handleSubmit = async (e)=> {
             </div>
 
             <input
-              className="in11"
+              className="pad-right login-input"
               name="userName"
               onChange={handleChange}
               type="text"
@@ -107,38 +108,33 @@ const handleSubmit = async (e)=> {
             />
 
             <input
-              className="in11"
+              className="pad-right login-input"
               onChange={handleChange}
               name="password"
               type={type}
               placeholder="Password"
             />
-            <span className="showHide field-icon">
+            <span className="field-icon ">
               <Icon icon={icon} size={20} onClick={HandleIconChange} />
             </span>
-            <button className="btnSign">Agree and Join</button>
+              </div>
+            <button className="btn_join">Agree and Join</button>
           </form>
-          <p className="mt-md-5 mt-sm-5 text-center texttag">
-            I agree to the
-            <Link to="" className="a22">
-              privacy policy
-            </Link>
-            and
-            <Link to="" className="a22">
-              terms of serivice.
-            </Link>
+         
+          <p className="">
+            I agree to the<Link to="" className="">privacy policy</Link>and<Link to="" className="">terms of serivice.</Link>
           </p>
           
-          <Link to="/login" className="a33 text-center">
+          <Link to="/login" className="">
             Already have an account?
           </Link>
         </div>
-        <div className="SignupNote container col-12 col-md-6 ms-md-2  mt-sm-5">
-          <p className="forTitle">About</p>
+        <div className="about-container">
+          <span className="forTitle">About</span>
           <h1>Evangadi Networks Q&A</h1>
           <p>No matter what stage of life you are in, whether you’re just starting elementary school or being promoted to CEO of a Fortune 500 company, you have much to offer to those who are trying to follow in your footsteps.!</p>
           <p>Wheather you are willing to share your knowledge or you are just looking to meet mentors of your own, please start by joining the network here.</p>
-          <button className="btn1">HOW IT WORKS</button>
+          <button className="btn_how">HOW IT WORKS</button>
         </div>
       </div>
     </div>

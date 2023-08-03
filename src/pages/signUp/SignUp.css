@@ -1,3 +1,157 @@
+
+
+.container-fluid {
+	background-image: url("../../images/bg-svg-f.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: whitesmoke;
+	margin: 0px;
+	padding: 0px;
+}
+.container {
+	display: flex;
+    align-items: center; /* Center align horizontally */
+    justify-content: space-between;
+    padding: 50px 10px;
+	width: 80%;
+	margin: 0px auto;
+}
+.name-container {
+	display: flex;
+	justify-content: space-around;
+    /* -ms-flex-wrap: wrap; */
+    /* flex-wrap: wrap; */
+    /* margin-right: -15px;
+    margin-left: -15px; */
+}
+.signupContainer {
+	display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+	width: 50%;
+	padding: 100px 0px 100px 30px;
+	background-color: white;
+	box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
+    /* Set the border radius */
+    border-radius: 9px;
+	
+}
+.about-container {
+	width: 50%;
+	padding: 20px;
+}
+.login-input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	border-radius: 6px;
+
+}
+.form {
+	padding-right: 40px
+}
+.name-input {
+	flex: 1;
+	width: 48%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	border-radius: 6px;
+
+}
+.pad-left {
+	margin-left: 20px;
+	margin-right: -20px
+}
+.field-icon {
+	float: right;
+  margin-top: -39px; /* Adjust this value to change the vertical position */
+  position: relative;
+  z-index: 2;
+  margin-right: 10px; 
+  color: #ccc;
+
+  }
+  
+  .signupContainer a{
+     text-align: center;
+	 color: #FF8500;
+	 font-size: 13px;
+	 padding: 10px;
+}
+.signupContainer p {
+ text-align: center;
+ font-size: 15px;
+}
+.create-acc {
+	 margin-bottom: 40px;
+
+}
+.signupContainer h3 {
+	font-weight: 700;
+    margin-top: 0px;
+	font-size: 20px;
+    line-height: 1.4em;
+}
+
+.btn_how {
+    width: 200px;
+  background-color: #FF8500;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: 400;
+  text-align: center; /* Align the button's text to the left */
+  font-size: 1rem;
+  padding: 10px;
+}
+.btn_join{
+    width: 96%;
+  background-color: #516CF0;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: 400;
+  text-align: center; /* Align the button's text to the left */
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0 0 20px 0;
+
+}
+.about-container h1{
+		font-size: 45px;
+		color: #4b456f;
+		line-height: 52px;
+		font-weight: 600;
+		margin: 0;
+	}
+.about-container p {
+        color: #656565;
+    font-size: 15px;
+    line-height: 28px;
+    margin-top: 20px;
+	}
+.forTitle {
+	font-size: 14px;
+	font-family: Lato, sans-serif;
+	color: #fe8303;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
 .sign_page {
 	background-image: url("../../images/bg-svg-f.svg");
 	background-repeat: no-repeat;
@@ -105,4 +259,4 @@ form {
 }
 .a22 {
 	margin-right: 0px;
-}
+} */

@@ -1,56 +1,66 @@
-.question_steps{
-    font-size: large;
-  }
-  .question_form {
-      min-height: 500px;
-      border-radius: 15px;
-      background: #ffffff;
-      box-shadow: 5px 5px 10px #e8e8e8, -5px -5px 10px #ffffff;
-  }
-  .question_title{
-      padding: 15px 25px;
-      border-radius: 15px;
-      font-size: 1.2rem;
-      border: silver 1px solid;
-  }
-  .question_title:focus{
-      outline: none;
-  }
-  .question_input {
-      height: 200px;
-      padding: 15px 25px;
-      border-radius: 15px;
-      font-size: 1.15384615rem;
-      border: silver 1px solid;
-  }
-  
-  .question_input:focus {
-      outline: none;
-  }
-  .question_post_btn {
-      max-width: 200px;
-      height: 41px;
-      background-color: #516cf0;
-      color: white;
-      border: 1px solid transparent;
-      border-radius: 4px;
-      font-size: 1rem;
-      margin-top: 40px;
-  }
-  .question_post_btn:hover {
-      background-color: #fe8402;
-  }
-  .question_post_btn:active{
-      background-color: #516cf0;
-  }
-  
-  .quill{
-      height: 250px;
-      background-color: #F1F2F3;
-      mask-image: linear-gradient(black 5%, transparent) !important;
-      color: black;
-      border: none;
-  }
-  .ql-container.ql-snow{
-      border: none !important;
-  }
+.ask-question {
+    /* Center align vertically */
+    /* height: 100vh; */
+}
+.guide_question {
+     display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align horizontally */
+    justify-content: center;
+    padding: 10px;
+}
+h3 {
+    margin-bottom: 0px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.guide_question  li{
+font-size: 13px;
+}
+.question_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto; 
+    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.2);
+    /* Set the border radius */
+    border-radius: 20px;
+    /* Optional: Add some padding and background color for better presentation */
+    padding: 40px;
+    background-color: #ffffff;
+}
+.question_container a {
+    text-decoration: none;
+    color: #333;
+    font-size: 10px;
+    padding: 10px;
+}
+.quill, .question-input  {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.btn_post{
+    width: 200px;
+  background-color: #516CF0;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: 400;
+  text-align: center; /* Align the button's text to the left */
+  font-size: 1rem;
+  padding: 10px;
+}
+.btn_post:hover{
+    background-color: #FF8500;
+}
+.align-left {
+    width: 100%;
+    text-align:left;
+}

@@ -1,72 +1,114 @@
-.header{
-    min-width: 500px;
-    min-height: 10vh;
-    background-color: white;
-    display: flex;
-    align-items:center;
-    box-shadow: 0 2px 4px rgb(81 107 152 / 16%);
+/* CSS for the header section */
+.header {
+  /* background-clor: #333; */
+  color: #fff;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+
 }
-.innerContainer{
-    align-items:center;
+
+/* Flex container for inner elements */
+.innerContainer {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0 auto;
 }
-.innerContainer2{
+
+/* Styles for the header logo */
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling the logo image */
+.header-logo img {
+  max-height: 16px;
+}
+
+/* Styles for the navigation links container */
+.myLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /* justify-content: space-between; */
+  width: 60%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  
+}
+.myLinks a {
+  text-decoration: none;
+  color: #171f3c;
+  font-size: 15px;
+  padding: 10px 12px !important;
+  font-weight: 500;
+  line-height: 30px;
+  
+  }
+  
+  .myLinks-hov a:hover{
+    color: #FF8500; /* This style was previously commented out */
+  }
+.myLinks div {
+  margin: 0 5px;
+}
+.btn_header{
+    width:110px ;
+    height: 21px;
+    background-color: #516CF0;
+    color: white;
+    border: none;
+    border-radius:3px ;
+    font-weight: 400px;
+    text-align: center;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    padding: 5px;
+}
+.btn_header:hover{
+    background-color: #FF8500;
+}
+
+/* Optional: Add styling for the button and other elements as needed */
+
+
+/* .innerContainer2{
     width: 400px;
     align-items: center;
-}
-.header__container{
+} */
+/* .header__container{
     display: flex;
     align-items: center;
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     opacity: initial;
     background-color: #FFFFFF;
-}
-img{
-    width: 200px;
-}
+} */
 
-.ic{
+/* .ic{
     font-size: 30px;
     color: #FF8500;
     background: none;
     border: none;
     cursor: pointer;
-}
-.ic:focus{
+} */
+/* .ic:focus{
     outline: 0;
-}
-.innerContainer2  >  a{
-    color:#3B455A ;
-    text-decoration: none;
-    font-size: 15px;
-    margin-right: 20px;
-    font-family:Lato,sans-serif;
-    font-weight: bold;
-}
-.innerContainer2  >  a:hover{
+} */
+
+/* .innerContainer2  >  a:hover{
     color:#FF8500 ;
-}
-.btn_header{
-    width:200px ;
-    height: 41px;
-    background-color: #516CF0;
-    color: white;
-    border: none;
-    border-radius:4px ;
-    font-weight: 400px;
-    text-align: center;
-    border: 1px solid transparent;
-    font-size: 1rem;
-}
-.btn_header:hover{
-    background-color: #FF8500;
-}
-.btn_header:active{
+} */
+
+/* .btn_header:active{
     border:3px solid #516cf0;
-}
+} */
 
 
 
-.show {
+/* .show {
     display: none !important;
     background-color: #000000;
     position: absolute;
@@ -75,42 +117,30 @@ img{
     right: 0;
     border: 1px solid #ccc;
     padding: 10px;
-  }
+  } */
   
-  #myLinks.show a {
+  /* #myLinks.show a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
     margin: 5px 0;
-  }
+  } */
   
 
 
 
-  #myLinks {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #F8F8F8;
-    padding: 10px 20px;
-    box-sizing: border-box;
+  .myLinks {
+   
     
   }
   
-  #myLinks a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 20px;
   
-  }
   
-  #myLinks a:hover {
+  .myLinks a:hover {
     color: #555;
   }
   
-  #myLinks .btn_header {
+  /* #myLinks .btn_header {
     border: none;
     background-color: #0064FF;
     color: #fff;
@@ -120,11 +150,11 @@ img{
     cursor: pointer;
     transition: all 0.3s ease;
     
-  }
+  } */
   
-  #myLinks .btn_header:hover {
+  /* #myLinks .btn_header:hover {
     background-color: #003DA5;
-  }
+  } */
 
   
   

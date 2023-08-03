@@ -9,7 +9,8 @@ import logo from "../images/logo1.png";
 export default function Footer() {
   return (
     <footer className="footer-wrapper d-md-flex justify-content-around">
-        <div className="logo-icon-wrapper">
+      <div className="footer-container">
+        <div className="logo-icon-wrapper row">
           <div className="logo">
             <img src={logo} />
           </div>
@@ -42,6 +43,7 @@ export default function Footer() {
             <p>support@evangadi.com</p>
             <p>+1-202-386-2702</p>
           </div>
+        </div>
         </div>
     </footer>
   );

@@ -61,31 +61,41 @@ const Login = () => {
     }
   };
   return (
-    <div className="container-fluid login_page">
-      <div className="container py-5 d-md-flex justify-content-between login_container">
-        <div className="main col-12 col-md-6 me-md-2 p-5 d-flex flex-column justify-content-center">
-          <p className="p1">Login to your account</p>
-          <p className="p2 text-center">
+    <div className="container-fluid ">
+      <div className="container">
+        <div className="login_container">
+          <h3 className="">Login to your account</h3>
+          <p className="create-acc">
             Don't have an account?<Link to='/signup' className="a3">Create a new account</Link>
           </p>
           <form onSubmit={handleSubmit}>
-            <input className="input1" type="email" name="email" onChange={handleChange} placeholder="Your Email" />
-            <input className="input1" type={type} name="password" onChange={handleChange} placeholder="Your Password" />
-            <span onClick={HandleIconChange} className="showHide2">
-              <Icon className="field-icon" icon={icon} size={20} />
-            </span>
-            <button className="btn1">Login</button>
+            <input className="login-input" type="email" name="email" onChange={handleChange} placeholder="Your Email" />
+            <div className="input-container">
+  <input
+    className="login-input"
+    type={type}
+    name="password"
+    onChange={handleChange}
+    placeholder="Your Password"
+  />
+  <span onClick={HandleIconChange} className="showHide2">
+    <Icon className="field-icon" icon={icon} size={20} />
+  </span>
+</div>
+         <div className="align-center">
+            <button className="btn_login">submit</button>
+         </div>
           </form>
           <Link to='/signup' className="a3">
             Create an account?
           </Link>
         </div>
-        <div className="sideNote2 container col-12 col-md-6 ms-md-2  mt-sm-5">
-          <p className="forTitle">About</p>
+        <div className="about-container">
+          <span className="forTitle">About</span>
           <h1>Evangadi Networks Q&A</h1>
           <p>No matter what stage of life you are in, whether you’re just starting elementary school or being promoted to CEO of a Fortune 500 company, you have much to offer to those who are trying to follow in your footsteps.!</p>
           <p>Wheather you are willing to share your knowledge or you are just looking to meet mentors of your own, please start by joining the network here.</p>
-          <button className="btn1">HOW IT WORKS</button>
+          <button className="btn_login">HOW IT WORKS</button>
         </div>
       </div>
     </div>

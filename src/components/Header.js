@@ -26,44 +26,44 @@ function Header({ logout }) {
   }
 
   return (
-    <>
-      <div className="header container-fluid">
-        <div className="innerContainer container d-flex justify-content-around ">
-          <Link to="/" className="header__image">
+    <div className="header">
+      <div className="innerContainer">
+        <div className="header-logo">
+          <Link to="/" className="">
             <img src={logo} alt="Evangadi logo" />
           </Link>
-          <button onClick={drop} className="ic d-sm-block d-md-none">
+          {/* <button onClick={drop} className="">
             ☰
-          </button>
+          </button> */}
 
-          <div className="d-flex  innerContainer2 justify-content-between d-none  d-md-block">
+          {/* <div className="d-flex  innerContainer2 justify-content-between d-none  d-md-block">
             <Link to="/SignUp">Home</Link>
             <Link to="/">How it Works</Link>
             <button onClick={goToSignIn} className="btn_header">
               {userData.user ? "LogOut" : "SIGN IN"}
             </button>
-          </div>
+          </div> */}
         </div>
-      </div>
+      
 
       <div
-        className="d-block  justify-content-between  d-md-none"
-        id="myLinks"
+        className="myLinks"
+        id=""
       >
-        <div className="d-md-none">
+        <div className="myLinks-hov">
+          
           <Link to="/">Home</Link>
         </div>
-        <hr className="d-md-none"/>
-        <div className="d-md-none">
+        <div className="myLinks-hov">
           <Link to="/">How it Works</Link>
         </div>
-        <hr className="d-md-none"/>
-        <div onClick={goToSignIn} className="d-md-none btn_header">
+        <div onClick={goToSignIn} className="btn_header">
          <Link to='/'> {userData.user ? "LogOut" : "SIGN IN"} </Link>
         </div>
         
       </div>
-    </>
+      </div>
+    </div>
   );
 }
 

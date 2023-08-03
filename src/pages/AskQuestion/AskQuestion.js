@@ -40,8 +40,8 @@ import 'react-quill/dist/quill.snow.css';
 
 
   return (
-    <div className="container my-5">
-      <div className="d-flex flex-column align-items-center my-5">
+    <div className="ask-question ">
+      <div className="guide_question">
         <h3>Steps to write a good question</h3>
         <ul className="question_steps">
           <li>Summerize your problem in a one-line title.</li>
@@ -51,12 +51,12 @@ import 'react-quill/dist/quill.snow.css';
         </ul>
       </div>
       
-      <form onSubmit={handleSubmit} className="d-flex flex-column p-5 question_form  justify-content-between">
+      <form onSubmit={handleSubmit} className="question_container">
         <h3>Ask a public question</h3>
-        <Link to="/" className="text-decoration-none text-reset cursor-pointer">
+        <Link to="/" className="">
           Go to Question page
         </Link>
-        <input className="question_title" type="text" name="question" Placeholder="Title" onChange={handleChange} />
+        <input className="question-input" type="text" name="question" Placeholder="Title" onChange={handleChange} />
         {/* <textarea
           className="question_input"
           placeholder="Question Description..."
@@ -64,12 +64,13 @@ import 'react-quill/dist/quill.snow.css';
           onChange={handleChange}
         ></textarea> */}
 
-        <ReactQuill className="w-100 quill my-2" theme="snow" value={value} onChange={setValue}          
+        <ReactQuill className=" quill " theme="snow" value={value} onChange={setValue}          
                 placeholder="Question Description..."/>
-        
-        <button className="question_post_btn" type="">
+        <div className="align-left">
+        <button className="btn_post" type="">
           Post Your Question
         </button>
+        </div>
       </form>
     </div>
   );

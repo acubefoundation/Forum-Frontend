@@ -10,6 +10,9 @@ import SignUp from './pages/signUp/SignUp';
 import Footer from './components/Footer';
 import Ask from './pages/AskQuestion/AskQuestion'
 import AnswerQuestion from './pages/AskQuestion/AskQuestion';
+import HeaderOutlet from './pages/outlate/HeaderOutlate';
+import HeadFootOutlate from './pages/outlate/HeadFootOutlate';
+import HeaderOutlate from './pages/outlate/HeaderOutlate';
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -46,15 +49,21 @@ function App() {
   }, []);
   return (
     <Router>
-      <Header logout={logout} />
       <Routes>
+        <Route path="/" element={<HeaderOutlate />}>
+        <Route path="/questions/:id" element={<AnswerQuestion />} />
+        <Route path="/ask-question" element={<Ask />} />
+        
+
+        <Route path="/" element={<HeadFootOutlate />}>
+
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home logout={logout} />} />
-        <Route path="/ask-question" element={<Ask />} />
-        <Route path="/questions/:id" element={<AnswerQuestion />} />
+        </Route>
+        </Route>
+
       </Routes>
-      <Footer />
     </Router>
   )
 }

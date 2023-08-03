@@ -3,6 +3,20 @@
   background-color: #3b455a;
   padding-left: 30px;
 }
+.footer-container {
+  display: flex;
+ align-items: center; /* Center align horizontally */    justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+
+}
+.row {
+  width: 33.3%;
+}
+.row h3 {
+text-align: left;
+}
 .Useful-link {
   border: 1px solid #3b455a;
 }
@@ -38,7 +52,4 @@
   display: flex;
   flex-direction: column;
   color: rgba(213, 213, 213, 0.6);
-}
-.Contact-Info {
-  padding-bottom: 50px;
 }
