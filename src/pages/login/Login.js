@@ -21,8 +21,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const loginRes = await axios.post(`${process.env.REACT_APP}/api/users/login`
-      ,
+      const loginRes = await axios.post(`http://localhost:4500/api/users/login`,
         {
           email: form.email,
           password: form.password,
@@ -44,7 +43,6 @@ const Login = () => {
     }
   };
   // console.log(userData.user.id)
-  console.log(process.env.REACT_APP)
 
   useEffect(() => {
     if (userData.user) navigate("/");
