@@ -65,7 +65,7 @@
 	margin-left: 20px;
 	margin-right: -20px
 }
-.field-icon {
+.name-container .field-icon {
 	float: right;
   margin-top: -39px; /* Adjust this value to change the vertical position */
   position: relative;

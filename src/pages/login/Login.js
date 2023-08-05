@@ -21,8 +21,8 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const loginRes = await axios.post(
-        `${process.env.REACT_APP_base_url}/api/users/login`,
+      const loginRes = await axios.post(`${process.env.REACT_APP}/api/users/login`
+      ,
         {
           email: form.email,
           password: form.password,
@@ -33,14 +33,19 @@ const Login = () => {
         token: loginRes.data.token,
         user: loginRes.data.user,
       });
+ const expirationTime = new Date().getTime() + 60 * 60 * 1000;
 
-      localStorage.setItem("auth-token", loginRes.data.token);
-      navigate("/");
+        localStorage.setItem("auth-token", loginRes.data.token);
+        localStorage.setItem("auth-token-expiration", expirationTime);
+              navigate("/");
     } catch (err) {
       console.log("problem", err);
       alert(err.response.data.msg);
     }
   };
+  // console.log(userData.user.id)
+  console.log(process.env.REACT_APP)
+
   useEffect(() => {
     if (userData.user) navigate("/");
   }, [userData.user, navigate]);

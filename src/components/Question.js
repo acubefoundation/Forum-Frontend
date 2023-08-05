@@ -1,21 +1,32 @@
 import React from 'react'
 import "./Question.css";
-import profile from "../images/user1.png"
+import profile from "../images/user3.png";
+
+
+// icons 
+import { Icon } from "react-icons-kit";
+import {chevronRight} from 'react-icons-kit/fa/chevronRight'
 
 const Question = ({question,userName}) => {
     return (
-        <div className="d-md-flex align-items-center justify-space-between">
-            <div className="d-flex flex-md-column avatar-container">
+        <div className='the_hole-question' >
+
+
+        <div className="avatar-container">
+            <div className="av-user">
                 <img className="avatar" src={profile} alt="Avatar" />
-                <h6 className="align-self-center ms-2 ms-md-0 text-center">{userName}</h6>
+                <h6 className="">{userName}</h6>
             </div>
-            <div className="ms-md-5 flex-grow-1">
-                <h6 className="pt-2 pt-md-0">{question}</h6>
+            <div className="que-desc">
+                <h6 className="">{question}</h6>
             </div>
-            <div className="d-none d-md-block ms-md-5">
-                <i className="fa fa-angle-right "></i>
-            </div>
+           
         </div>
+        <div className='fieldIcon' style={{ color: 'black', }}>
+        <Icon className="field-icon" icon={chevronRight} size={30} />
+        </div>
+        </div>
+
     )
 }
 

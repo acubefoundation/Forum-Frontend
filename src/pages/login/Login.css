@@ -40,7 +40,7 @@
 
 }
 
-.field-icon {
+.input-container .field-icon {
 	float: right;
   margin-top: -39px; /* Adjust this value to change the vertical position */
   position: relative;
@@ -48,7 +48,7 @@
   margin-right: 10px; 
   }
   
-  .field-icon {
+  .showHide2 .field-icon {
 	/* Adjust the styles as needed for your icon */
 	color: #ccc;
   }

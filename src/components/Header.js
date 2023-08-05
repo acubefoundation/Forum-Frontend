@@ -4,7 +4,7 @@ import "./Header.css";
 import logo from "../images/evangadi-logo-home.png";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
-function Header({ logout }) {
+function Header() {
   const [userData, setUserData] = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -15,7 +15,13 @@ function Header({ logout }) {
     }
     navigate("/login");
   };
-
+  const logout = () => {
+    setUserData({
+      token: undefined,
+      user: undefined,
+    });
+    localStorage.setItem('auth-token', '');
+  };
   function drop() {
     var x = document.getElementById("myLinks");
     if (x.classList.contains("show")) {

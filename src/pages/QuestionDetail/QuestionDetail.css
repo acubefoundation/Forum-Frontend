@@ -1,3 +1,37 @@
+.answer_page_container {
+    width: 70%;
+	margin: 0 auto;
+	min-width: 500px;
+    min-height: 65vh;
+	padding-bottom: 15px;
+}
+.question_user {
+    padding-top: 30px;
+}
+.answer_page_container h3 {
+    font-weight: 500;
+    margin: 0px;
+	font-size: 25px;
+    line-height: 1.4em;
+    padding-bottom: 10px;
+
+}
+.answer_page_container h5 {
+    margin: 0;
+    font-weight: 500;
+	font-size: 17px;
+    line-height: 1.4em;
+	text-transform: capitalize;
+}
+.question_desc p {
+    margin: 0;
+    font-weight: 300;
+	font-size: 11px;
+    line-height: 1.4em;
+    padding-top: 5px;
+
+}
+
 .avatar {
     border-radius: 100%;
     background-color: darkgray;

@@ -1,10 +1,10 @@
 import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../../context/UserContext';
-import "./AnswerQuestion.css"
+import "./answerQuestion.css";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { UserContext } from '../context/UserContext';
 
 const AnswerQuestion = ({ questionId }) => {
   const [userData, setUserData] = useContext(UserContext);
@@ -18,7 +18,7 @@ const AnswerQuestion = ({ questionId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${process.env.REACT_APP_base_url}/api/answer`,
+      await axios.post(`http://localhost:4500/api/answer`,
         {
           id: userData.user.id,
           questionId: questionId,
@@ -31,12 +31,16 @@ const AnswerQuestion = ({ questionId }) => {
     }
   }
   return (
-    <div className="container my-5">
-      <form onSubmit={handleSubmit} className="d-flex flex-column p-5 answer_form  justify-content-between">
+    <div className="answer_container">
+      <form onSubmit={handleSubmit} className="">
         <h3 className="">Answer The Top Question</h3>
-        <Link to="/" className="text-decoration-none text-reset cursor-pointer">
+        <div className='text-reset'>
+
+       
+        <Link to="/">
           Go to Question page
         </Link>
+         </div>
 
         {/* <textarea
           onChange={handleChange}
@@ -46,7 +50,7 @@ const AnswerQuestion = ({ questionId }) => {
           id=""
         ></textarea> */}
 
-        <ReactQuill className="w-100 quill my-2" theme="snow" value={value} onChange={setValue}          
+        <ReactQuill className="answer_input" theme="snow" value={value} onChange={setValue}          
                 placeholder="Question Description..."/>
 
         <button className="answer_post_btn" type="">

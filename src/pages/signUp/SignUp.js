@@ -36,8 +36,10 @@ const handleSubmit = async (e)=> {
                
             }
         )
-        localStorage.setItem('auth-token', loginUser.data.token)
-          Navigate('/')
+ const expirationTime = new Date().getTime() + 60 * 60 * 1000;
+
+        localStorage.setItem("auth-token", loginUser.data.token);
+        localStorage.setItem("auth-token-expiration", expirationTime);          Navigate('/')
         }catch (err) {
             console.log('the problem is that>>>', err.res.data.msg)
             alert('the problem is that>>>', err.res.msg)        

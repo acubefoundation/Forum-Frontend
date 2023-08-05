@@ -14,13 +14,14 @@ const Home = () => {
   const Questions = async () => {
     try {
       const questionRes = await axios.get(
-        `${process.env.REACT_APP_base_url}/api/questions`
+        `http://localhost:4500/api/question/all`
       );
       setAllQuestions(questionRes.data.data);
     } catch (err) {
       console.log("problem", err);
     }
   };
+  console.log(allQuestions)
   useEffect(() => {
     if (!userData.user) navigate("/login");
     Questions();
@@ -31,22 +32,22 @@ const Home = () => {
     navigate("/ask-question");
   };
   return (
-    <div className="container my-5 home-container">
-      <div className="d-md-flex mb-5 justify-content-between">
+    <div className="home-container">
+      <div className="button-user">
         <button className="ask_button" onClick={handleClick}>
           Ask Question
         </button>
-        <input
-          className="question_title searchTitle d-block my-2 w-10"
+        {/* <input
+          className=""
           type="text"
           // name="search"
           Placeholder="Search Questions"
           onChange={(e) => setSearch(e.target.value)}
-        />
+        /> */}
         <h4>Welcome: {userData.user?.display_name}</h4>
       </div>
       <h3>Questions</h3>
-      <div>
+      <div className="allQuestion">
         {allQuestions
           .filter((question) => {
             if (search === "") {
@@ -63,7 +64,7 @@ const Home = () => {
               <hr />
               <Link
                 to={`questions/${question.post_id}`}
-                className="text-decoration-none text-reset"
+                className=""
               >
                 <Question
                   question={question.question}

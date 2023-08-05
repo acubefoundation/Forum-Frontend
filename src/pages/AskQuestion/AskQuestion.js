@@ -9,7 +9,10 @@ import 'react-quill/dist/quill.snow.css';
  function AskQuestion() {
   const [userData, setUserData] = useContext(UserContext);
   const [form, setForm] = useState({});
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
+  const [error, setError] = useState(null)
+  const [value, setValue] = useState('');
 
 
 
@@ -18,27 +21,52 @@ import 'react-quill/dist/quill.snow.css';
   };
 
   
-  const [value, setValue] = useState('');
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const { question, questionDescription } = form; // Assuming you have the form state
+
+    // // Check if question and questionDescription are not empty
+    // if (!question || !questionDescription) {
+    //     alert("Please fill out both the title and description before submitting.");
+    //     return;
+    // }
+
+    // Set loading state to true before making the API request
+    setLoading(true);
+
     try {
-      await axios.post(`${process.env.REACT_APP_base_url}/api/questions`,
-        {
-          id:userData.user.id,
-          question: form.question,
-          questionDescription: value,
-        }
-      );
+        // Make a POST request to your API endpoint for posting questions
+        const response = await axios.post('http://localhost:4500/api/question', {
+          user_id: userData.user.id,
+            question: form.question,
+            description: value
+        });
 
-      navigate("/");
+        // Handle the response data if needed
 
+        // Reset the form after successful submission
+        setForm({
+            question: '',
+            questionDescription: ''
+        });
+
+        // Navigate or perform any other actions on successful submission
     } catch (err) {
-      console.log("problem", err);
+        console.log("Error posting question:", err);
+        // Set error state with the error message
+        setError("Error posting the question. Please try again later.");
+    } finally {
+        // Set loading state back to false after the API request is completed (whether it succeeded or failed)
+        setLoading(false);
+        setError(null);
     }
-  }
+};
 
-
+  console.log(userData)
   return (
     <div className="ask-question ">
       <div className="guide_question">
@@ -50,7 +78,12 @@ import 'react-quill/dist/quill.snow.css';
           <li>Review your question and post it to the site.</li>
         </ul>
       </div>
-      
+      {error && (
+  <div className="error-message">{error}</div>
+)}
+      {loading ? (
+  <div>Loading...</div>
+) : (
       <form onSubmit={handleSubmit} className="question_container">
         <h3>Ask a public question</h3>
         <Link to="/" className="">
@@ -72,6 +105,7 @@ import 'react-quill/dist/quill.snow.css';
         </button>
         </div>
       </form>
+)};
     </div>
   );
 }

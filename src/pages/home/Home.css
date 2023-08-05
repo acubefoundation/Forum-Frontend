@@ -1,6 +1,26 @@
+/* .the_hole-question {
+	display: flex;
+    justify-content: space-between;
+} */
+
 .home-container {
+	width: 70%;
+	margin: 0 auto;
 	min-width: 500px;
     min-height: 65vh;
+	padding-bottom: 30px;
+}
+.button-user {
+	display: flex;
+    justify-content: space-between;
+	padding: 40px;
+}
+.button-user h4 {
+	font-weight: 400;
+    margin-top: 0px;
+	font-size: 25px;
+    line-height: 1.4em;
+	text-transform: capitalize;
 }
 .ask_button {
 	width: 275px;
@@ -25,9 +45,22 @@ hr{
     border: 0;
     border-top: 1px solid rgba(0,0,0,.1);
 }
-.searchTitle:hover{
+.home-container h3 {
+	font-weight: 700;
+    margin-top: 0px;
+	font-size: 25px;
+    line-height: 1.4em;
+}
+.allQuestion a{
+	text-decoration: none;
+text-align: center;
+color: #746d6d;
+font-size: 20px;
+font-weight: 800;
+}
+/* .searchTitle:hover{
 	border:solid 1px #516CF0;
 }
 .searchTitle{
 	height: 40px;
-}
+} */

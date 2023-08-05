@@ -13,6 +13,7 @@ import AnswerQuestion from './pages/AskQuestion/AskQuestion';
 import HeaderOutlet from './pages/outlate/HeaderOutlate';
 import HeadFootOutlate from './pages/outlate/HeadFootOutlate';
 import HeaderOutlate from './pages/outlate/HeaderOutlate';
+import SingleQuestion from './pages/QuestionDetail/QuestionDetail';
 function App() {
   const [userData, setUserData] = useContext(UserContext);
 
@@ -51,8 +52,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HeaderOutlate />}>
-        <Route path="/questions/:id" element={<AnswerQuestion />} />
+        <Route path="/questions/:id" element={<SingleQuestion />} />
         <Route path="/ask-question" element={<Ask />} />
+        {/* <Route path="/single-question" element={<SingleQuestion />} /> */}
         
 
         <Route path="/" element={<HeadFootOutlate />}>
