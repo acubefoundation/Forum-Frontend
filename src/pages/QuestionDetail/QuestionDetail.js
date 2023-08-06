@@ -14,19 +14,19 @@ const SingleQuestion = () => {
   const questionByPostId = async () => {
     try {
       const question = await axios.get(
-        `http://localhost:4500/api/question/${params.id}`
+        `https://lazy-battledress-fawn.cyclic.cloud/api/question/${params.id}`
       );
       setQuestion(question.data.data);
     } catch (err) {
       console.log("problem", err);
     }
   };
-
+console.log(question)
 
   const answersByQuestionId = async () => {
     try {
       const answersRes = await axios.get(
-      `http://localhost:4500/api/answer/${question?.question_id}`
+      `https://lazy-battledress-fawn.cyclic.cloud/api/answer/${question?.question_id}`
       );
       setAnswers(answersRes.data.data);
     } catch (err) {

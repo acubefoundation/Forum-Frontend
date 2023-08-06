@@ -2,19 +2,19 @@ import React from 'react'
 import profile from '../images/User.png'
 const Answer = ({answer,userName}) => {
     return (
-        <div>
+        <div className='the_hole-question'>
             <hr />
-            <div className="d-md-flex align-items-center justify-space-between">
-                <div className="d-flex flex-md-column">
+            <div className="avatar-container">
+                <div className="av-user">
                     <img
                         className="avatar"
                         src={profile}
                         alt="User Avatar"
                     />
-                    <h6 className="align-self-center ms-2 ms-md-0">{userName}</h6>
+                    <h6 className="">{userName}</h6>
                 </div>
-                <div className="ms-md-5">
-                    <div className="pt-2 pt-md-0">
+                <div className="">
+                    <div className="">
                        <div dangerouslySetInnerHTML={{__html: (answer)}} />
                     </div>
                 </div>

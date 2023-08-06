@@ -14,7 +14,7 @@ const Home = () => {
   const Questions = async () => {
     try {
       const questionRes = await axios.get(
-        `http://localhost:4500/api/question/all`
+        `https://lazy-battledress-fawn.cyclic.cloud/api/question/all`
       );
       setAllQuestions(questionRes.data.data);
     } catch (err) {

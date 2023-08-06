@@ -23,9 +23,9 @@ const SignUp = () => {
 const handleSubmit = async (e)=> {
         e.preventDefault();
         try{
-                    await axios.post('http://localhost:4500/api/users', form)
+                    await axios.post('https://lazy-battledress-fawn.cyclic.cloud/api/users', form)
                
-        const loginUser = await axios.post('http://localhost:4500/api/users/login', {
+        const loginUser = await axios.post('https://lazy-battledress-fawn.cyclic.cloud/api/users/login', {
             email: form.email,
             password: form.password
         });
