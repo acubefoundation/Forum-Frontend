@@ -23,9 +23,9 @@ const SignUp = () => {
 const handleSubmit = async (e)=> {
         e.preventDefault();
         try{
-                    await axios.post(`${process.env.REACT_APP_URL}/api/users`, form)
+                    await axios.post(`https://lazy-battledress-fawn.cyclic.cloud/api/users`, form)
                
-        const loginUser = await axios.post(`${process.env.REACT_APP_URL}/api/users/login`, {
+        const loginUser = await axios.post(`https://lazy-battledress-fawn.cyclic.cloud/api/users/login`, {
             email: form.email,
             password: form.password
         });

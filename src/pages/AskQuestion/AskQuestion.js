@@ -40,7 +40,7 @@ import 'react-quill/dist/quill.snow.css';
 
     try {
         // Make a POST request to your API endpoint for posting questions
-        const response = await axios.post(`${process.env.REACT_APP_URL}/api/question`, {
+        const response = await axios.post(`https://lazy-battledress-fawn.cyclic.cloud/api/question`, {
           user_id: userData.user.id,
             question: form.question,
             description: value

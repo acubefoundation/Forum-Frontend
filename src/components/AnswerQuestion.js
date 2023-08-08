@@ -18,7 +18,7 @@ const AnswerQuestion = ({ questionId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:4500/api/answer`,
+      await axios.post(`https://lazy-battledress-fawn.cyclic.cloud/api/answer`,
         {
           id: userData.user.id,
           questionId: questionId,

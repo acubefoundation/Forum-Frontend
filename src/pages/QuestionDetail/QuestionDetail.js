@@ -14,7 +14,7 @@ const SingleQuestion = () => {
   const questionByPostId = async () => {
     try {
       const question = await axios.get(
-        `${process.env.REACT_APP_URL}/api/question/${params.id}`
+        `https://lazy-battledress-fawn.cyclic.cloud/api/question/${params.id}`
       );
       setQuestion(question.data.data);
     } catch (err) {
@@ -26,7 +26,7 @@ console.log(question)
   const answersByQuestionId = async () => {
     try {
       const answersRes = await axios.get(
-      `${process.env.REACT_APP_URL}/api/answer/${question?.question_id}`
+      `https://lazy-battledress-fawn.cyclic.cloud/api/answer/${question?.question_id}`
       );
       setAnswers(answersRes.data.data);
     } catch (err) {
@@ -40,6 +40,8 @@ console.log(question)
     answersByQuestionId();
   }, [question?.question_id]);
 
+  console.log(question);
+console.log(answers);
 
   return (
     <div className="answer_page_container">
